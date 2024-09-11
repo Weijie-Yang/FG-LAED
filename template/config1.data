@@ -1,0 +1,77 @@
+# A class for computing cutoff functions (including derivatives) for atom-centered descriptors
+cutoff_function tanh
+atom_weighted   0
+
+# SYMMETRY FUNCTIONS
+symfunction_short 2 0.00  0.00              0.007   0.000   6.0
+symfunction_short 2 0.00  0.00              0.012   0.000   6.0
+symfunction_short 2 0.00  0.00              0.022   0.000   6.0
+symfunction_short 2 0.00  0.00              0.040   0.000   6.0
+symfunction_short 2 0.00  0.00              0.072   0.000   6.0
+symfunction_short 2 0.00  0.00              0.131   0.000   6.0
+symfunction_short 2 0.00  0.00              0.239   0.000   6.0
+symfunction_short 2 0.00  0.00              0.428   0.000   6.0
+
+symfunction_short 2 0.00  9.00              0.007   0.000   6.0
+symfunction_short 2 0.00  9.00              0.012   0.000   6.0
+symfunction_short 2 0.00  9.00              0.022   0.000   6.0
+symfunction_short 2 0.00  9.00              0.040   0.000   6.0
+symfunction_short 2 0.00  9.00              0.072   0.000   6.0
+symfunction_short 2 0.00  9.00              0.131   0.000   6.0
+symfunction_short 2 0.00  9.00              0.239   0.000   6.0
+symfunction_short 2 0.00  9.00              0.428   0.000   6.0
+                                        
+
+symfunction_short 5 0.00  0.00  0.00        0.007  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.007   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.007  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.007   1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.043  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.043   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.043  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.043   1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.135  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.135   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.135  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.135   1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.236  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.236   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.236  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  0.00        0.236   1.000   6.000  6.0   0.000
+
+symfunction_short 5 0.00  0.00  9.00        0.007  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.007   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.007  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.007   1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.043  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.043   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.043  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.043   1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.135  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.135   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.135  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.135   1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.236  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.236   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.236  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  0.00  9.00        0.236   1.000   6.000  6.0   0.000
+
+symfunction_short 5 0.00  9.00  9.00        0.007  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.007   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.007  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.007   1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.043  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.043   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.043  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.043   1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.135  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.135   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.135  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.135   1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.236  -1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.236   1.000   1.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.236  -1.000   6.000  6.0   0.000
+symfunction_short 5 0.00  9.00  9.00        0.236   1.000   6.000  6.0   0.000
+
+
+
