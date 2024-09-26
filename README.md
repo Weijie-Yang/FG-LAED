@@ -1,4 +1,4 @@
-## FG-LAED是什么?
+## What is FG-LAED?
 FG-LAED (Feature Generator based on Local Atomic Environment Descriptor) is a Python-based toolkit designed to calculate atomic center symmetric function values by reading CIF structure files and automatically extracting inherent properties of coordinating elements. This toolkit facilitates customized feature generation for various types of catalysts, enabling automated catalyst design across a wide range of materials while effectively reducing costs.
 ## Requirements
 ```
@@ -14,30 +14,49 @@ utils.ACSF (custom utility for Atomic Cluster Symmetry Function)
 ```
 
 ## Example
-使用`input`中的数据进行特征提取。如下示例所示：
+extract features from the data in `input`. As shown in the example below:
 ```python
     form run import run
     configpath = r'template/config1.data'
     inputpath = r'input/'
-    data_2d, data_2d_path = DV_LAE(functionpath, reffunctionpath=None, intervelnum=10, mode='tsne', inputpath=inputpath,
-                                   savename=None, refnum=1, num=-1, distancemode=0, interval=interval)
+    savepath = r'temp/out'
+    def main():
+    split_and_save_files('temp/out', output_folder)
+    copy_and_rename_files(output_folder)    
+    # Define electronegativity values
+    element_values = {
+        'H': 2.20, 'He': None,
+        'Li': 0.98, 'Be': 1.57, 'B': 2.04, 'C': 2.55, 'N': 3.04, 'O': 3.44, 'F': 3.98,
+        # Add other elements as needed
+    }
+
+    process_data_files(output_folder, element_values)
 
 ```
 	
     After the execution is complete, an out folder will be automatically created within the temp directory. This out folder contains feature table files, and the Sheet3 in the table corresponds to the extracted features for each catalyst. 
 	
-## 参数介绍
+## Parameter introduction
 
 ```
-inputpath：输入文件目录
-configpath：对称函数配置文件目录
-reffunctionpath：参考结构对称函数目录，默认为 None，使用 functionpath
-intervelnum：使用直方图统计的区间个数
-mode：降维方式，默认为 tsne，可选 pca、tsne
-inputpath：势函数训练结构源文件
-distancemode：不同的直方图统计模式，默认为 0，可选 0、1、2。选择模式 0 时，统计两个直方图区间有不同则将差异向量取 1，反之取 0；选择模式 1 时，统计两个直方图区间使用二者距离作为差异向量；选择模式 2 时，统计两个直方图区间有不同则将差异向量则加 1，反之加 0
-savename：样本多样性可视化保存文件名，默认为 None，保存在 functionpath 下，命名格式为 [日期]_[源文件名]_[intervelnum]_[mode]_[distancemode].html
-interval：使用降维后分布进行筛选时，取的网格大小，默认为 0.05
-max_points_per_grid：使用降维后分布进行筛选时，每个网格最多保留样本的数量，默认为 1
-output：自定义精简后数据文件名，默认为 None，保存在 functionpath 下，命名格式为 output_[日期]_[源文件名]_[interval]_[max_points_per_grid].data
+with_energy_and_forces: specifies whether to include energy and forces in the output
+configpath: path to the configuration file
+calculate_gfun: calculates symmetry functions based on the configuration
+sysatoms: atoms object representing the system
+inputpath: path to the input data file
+savepath: output file path for the results
+get_gfunction: reads structure and computes symmetry functions, saving results to a file
+process_files：processes all relevant input files and generates corresponding output files
+find_first_column_of_Uiso: extracts the first column related to Uiso values for elements
+process_cif_files: reads an Excel file and matches elements with Uiso data in CIF files
+copy_data_files: copies specified lines from data files to new output files
+file_idx_dict: dictionary of file names and their corresponding indices to copy
+create_excel_from_data_files: combines data into an Excel format for easier analysis
+
+```
+## Notes
+
+```
+The script uses external libraries utils/ACSF.so, utils/cutoff.so and utils/cif2input.so for extracting CIF structures and computing symmetry functions.
+Users should ensure that the parameters in the config1.data file are set before running the script, and that their raw data is entered into the input.xlsx spreadsheet. Additionally, CIF files should be imported into the input folder.
 ```
