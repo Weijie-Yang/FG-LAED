@@ -14,7 +14,7 @@ utils.ACSF (custom utility for Atomic Cluster Symmetry Function)
 ```
 
 ## Example
-extract features from the data in `input`. As shown in the example below:
+Extract features from the data in `input`， as shown in the example below:
 ```python
     form run import run
     configpath = r'template/config1.data'
